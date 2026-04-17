@@ -80,9 +80,7 @@ export function useTasks() {
       subtasks: originalTask.subtasks.map(st => ({ ...st, completed: false })),
     };
 
-    delete recurringTask.id;
-    delete recurringTask.createdAt;
-    delete recurringTask.updatedAt;
+    
 
     createTask(recurringTask);
   };
